@@ -1,0 +1,55 @@
+---
+import Header from "../components/vue/header.vue";
+import Footer from "../components/vue/footer.vue";
+
+interface props {
+    title: string;
+    description?: string;
+}
+
+const { title, description = "Normal description" } = Astro.props as props;
+---
+
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="description" content={description} />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>{title}</title>
+    </head>
+    <body>
+        <Header />
+        <main>
+            <slot />
+        </main>
+        <Footer />
+    </body>
+</html>
+
+<style is:global>
+    *,
+    *::after,
+    *::before {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+    }
+    .container {
+        max-width: 1440px;
+        margin-left: auto;
+        margin-right: auto;
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+    section {
+        padding-top: 80px;
+        padding-bottom: 80px;
+    }
+    @media (min-width: 992px) {
+        section {
+            padding-top: 120px;
+            padding-bottom: 120px;
+        }
+    }
+</style>
