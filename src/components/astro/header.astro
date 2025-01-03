@@ -1,0 +1,54 @@
+---
+import Image from "astro/components/Image.astro";
+import Logo from "../../images/icons/logo.svg";
+---
+
+<header class="header">
+    <div class="container">
+        <div class="header-flex">
+            <a href="/" class="logo-wrapper">
+                <Image src={Logo} alt="logo" />
+            </a>
+            <ul class="menu-wrapper">
+                <li><a href="/"> Home </a></li>
+                <li><a href="/"> Discover </a></li>
+                <li><a href="/"> Special Deals </a></li>
+                <li><a href="/"> Contact </a></li>
+            </ul>
+            <div class="buttons-wrapper">
+                <a href="/login" class="btn-cta-white"> Login </a>
+                <a href="/register" class="btn-cta"> Sign up</a>
+            </div>
+        </div>
+    </div>
+</header>
+
+<style>
+    header.header{
+        padding:32px 0;
+        position: sticky;
+        top:0;
+        left:0;
+        right:0;
+    }
+    header.header .header-flex {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+    header.header .header-flex .menu-wrapper{
+        display: flex;
+        gap:64px;
+    }
+    header.header .header-flex .menu-wrapper li{
+        list-style: none;
+        opacity: .5;
+        transition: .5s ease-in-out;
+    }
+    header.header .header-flex .menu-wrapper li:hover{
+        opacity: 1;
+    }
+    header.header .header-flex .buttons-wrapper{
+        display: flex;
+    }
+</style>

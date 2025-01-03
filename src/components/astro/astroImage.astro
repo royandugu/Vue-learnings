@@ -1,0 +1,10 @@
+---
+import Image from "astro/components/Image.astro";
+
+interface props{
+    image:any;
+    alt:string;
+}
+const {image,alt} = Astro.props as props;
+---
+<Image src={image} alt={alt}/>

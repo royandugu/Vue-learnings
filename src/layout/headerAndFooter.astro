@@ -1,6 +1,5 @@
 ---
-import Header from "../components/vue/header.vue";
-import Footer from "../components/vue/footer.vue";
+import Header from "../components/astro/header.astro";
 
 interface props {
     title: string;
@@ -19,11 +18,10 @@ const { title, description = "Normal description" } = Astro.props as props;
         <title>{title}</title>
     </head>
     <body>
-        <Header />
+        <Header/>
         <main>
             <slot />
         </main>
-        <Footer />
     </body>
 </html>
 
@@ -35,6 +33,14 @@ const { title, description = "Normal description" } = Astro.props as props;
         margin: 0;
         padding: 0;
     }
+    body{
+        font-size: 14px;
+        color:#000000;
+    }
+    a{
+        text-decoration: none;
+        color: #000000;
+    }
     .container {
         max-width: 1440px;
         margin-left: auto;
@@ -45,6 +51,22 @@ const { title, description = "Normal description" } = Astro.props as props;
     section {
         padding-top: 80px;
         padding-bottom: 80px;
+    }
+    .btn-cta,.btn-cta-white{
+        padding: 16px 32px;
+    }
+    .btn-cta{
+        border-radius:20px;
+        background:#5D50C6;
+        color:#EEEEEE;
+    }
+    .btn-cta-white{
+        background:#fff;
+        color:#000000;
+    }
+    .overlay-text{
+        color:#F85E9F;
+        margin-bottom:16px;
     }
     @media (min-width: 992px) {
         section {

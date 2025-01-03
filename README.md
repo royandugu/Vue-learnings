@@ -18,3 +18,6 @@ and
 const incrementCount=()=>{
     count.value ++
 }
+
+## When to use Vue and when to use Astro
+Astro generally static site generation ko laagi ho. So therefore contents that don't require frequent changes can be done using Astro, for example the header, footer, layout. Whereas some components that need state management, need to be dynamic and all that, we can go with Vue. Remember: Astro vitra Vue auxa Vue vitra Astro audaina.
