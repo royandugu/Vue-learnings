@@ -3,8 +3,8 @@ import { ref, watch } from 'vue';
 const emit = defineEmits(['value-changed'])
 const testValue = ref(0)
 
-const changeTestValue = (value) => {
-    testValue.value=value;
+const changeTestValue = () => {
+    testValue.value++;
 }
 
 watch(testValue, (newValue) => {
@@ -16,10 +16,8 @@ watch(testValue, (newValue) => {
 <template>
     <section>
         <div class="container">
-            <h5> Current image is : {{ testValue }}</h5>
-            <button @click="changeTestValue()" id="change-image-btn" class="btn-cta"> Change to image one</button>
-            <button @click="changeTestValue()" id="change-image-btn" class="btn-cta"> Change to image two</button>
-            <button @click="changeTestValue()" id="change-image-btn" class="btn-cta"> Change to image three</button>
+            <h5> Ref value is : {{ testValue }}</h5>
+            <button @click="changeTestValue" id="change-image-btn" class="btn-cta"> Change to image one</button>
         </div>
     </section>
 </template>

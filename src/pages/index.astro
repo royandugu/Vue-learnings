@@ -2,9 +2,11 @@
 import HeaderAndFooter from "../layout/headerAndFooter.astro";
 import Counter from "../components/vue/counter.vue";
 import ImageChangeRenderer from "../components/astro/imageChangeRenderer.astro";
+import ImageSliderRenderer from "../components/astro/imageSliderRenderer.astro";
 ---
 
 <HeaderAndFooter title="Test">
 	<Counter client:load/>
 	<ImageChangeRenderer/>
+	<ImageSliderRenderer/>
 </HeaderAndFooter>

@@ -1,0 +1,45 @@
+---
+import Image from "astro/components/Image.astro"
+import ImageSlider from "../vue/imageSlider.vue"
+import Man from "../../images/man.jpg";
+---
+<section>
+    <div class="container">
+        <div class="image-slider-wrapper">
+            <Image src={Man} alt="man"/>
+            <Image src={Man} alt="man"/>
+            <Image src={Man} alt="man"/>
+        </div>
+        <ImageSlider client:visible/>
+    </div>
+</section>
+
+<style>
+    img{
+        max-width:100%;
+        height:auto;
+    }
+    .image-slider-wrapper{
+        display: flex;
+        overflow-x: hidden;
+        transition: .5s ease-in-out;
+    }
+    .move-left{
+        transform:translateX(-100%);
+    }
+    .move-right{
+        transform: translateX(100%);
+    }
+</style>
+
+<script>
+    const imageSliderWrapper = document.querySelector(".image-slider-wrapper");
+    document.addEventListener("move-left-event",()=>{
+        imageSliderWrapper?.classList.remove("move-right");
+        imageSliderWrapper?.classList.add("move-left");
+    });
+    document.addEventListener("move-right-event",()=>{
+        imageSliderWrapper?.classList.remove("move-left");
+        imageSliderWrapper?.classList.add("move-right");
+    });
+</script>
