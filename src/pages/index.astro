@@ -4,6 +4,8 @@ import Counter from "../components/vue/counter.vue";
 import MessagePassRenderer from "../components/astro/messagePassRenderer.astro";
 import ImageSliderRenderer from "../components/astro/imageSliderRenderer.astro";
 import NewsLetterRenderer from "../components/astro/newsLetterRenderer.astro";
+import ValueDisplayer from "../components/vue/valueDisplayer.vue";
+import ValueChanger from "../components/vue/valueChanger.vue";
 ---
 
 <HeaderAndFooter title="Test">
@@ -11,4 +13,5 @@ import NewsLetterRenderer from "../components/astro/newsLetterRenderer.astro";
 	<MessagePassRenderer/>
 	<ImageSliderRenderer/>
 	<NewsLetterRenderer/>
-</HeaderAndFooter>
+	<ValueChanger client:visible/>
+</HeaderAndFooter> 

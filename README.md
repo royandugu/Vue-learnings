@@ -61,3 +61,6 @@ This is where we hydrate when the slider is only visible. Before the slider is e
 
 ## Newsletter and newsletter renderer
 This is where we hydrate the necessary js for the form only when visible. Like the validation code and all that.
+
+## Variable sharing in vue 
+The provide function must be called in a parent component and inject must be used in a descendant component. Provide ko through we make that variable avaliable and then inject ko through access garne. Bascially parent component mah provide hunxa tesbata child mah pathaune.
