@@ -8,5 +8,9 @@
 </script>
 
 <template>
-    <button @click="incrementCount"> I am clicked my value {{ count }}</button>
+    <section>
+        <div class="container">
+            <button @click="incrementCount" class="btn-cta"> I am clicked my value {{ count }}</button>
+        </div>
+    </section>
 </template>
