@@ -1,0 +1,11 @@
+---
+import MessagePasser from "../vue/messagePasser.vue"
+---
+
+<MessagePasser client:only/>
+
+<script>
+    window.addEventListener("custom-event",function(e:any){
+        console.log(e.detail);
+    })
+</script>

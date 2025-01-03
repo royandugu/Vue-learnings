@@ -1,6 +1,6 @@
 <script setup>
 import { ref, watch } from 'vue';
-const emit = defineEmits(['value-changed'])
+
 const testValue = ref(0)
 
 const changeTestValue = () => {
@@ -16,7 +16,7 @@ watch(testValue, (newValue) => {
 <template>
     <section>
         <div class="container">
-            <h5> Ref value is : {{ testValue }}</h5>
+            <h5> Ref value is (the value in console is the message received from astro) : {{ testValue }}</h5>
             <button @click="changeTestValue" id="change-image-btn" class="btn-cta"> Change to image one</button>
         </div>
     </section>

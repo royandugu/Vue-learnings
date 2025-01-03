@@ -55,3 +55,9 @@ Consider server-side rendering: For dynamic content that doesn't need client-sid
 Image changer being the vue component and imageChangeRenderer being the astro component, these are the ones used to demonstrate the communication between astro and vue. 
 Astro --> vue (prop passing)
 Vue --> Astro (event dispatching)
+
+## ImageChangeRenderer and imageSlider
+This is where we hydrate when the slider is only visible. Before the slider is even visible we don't need any of the javascript that is for interaction with anchor buttons.
+
+## Newsletter and newsletter renderer
+This is where we hydrate the necessary js for the form only when visible. Like the validation code and all that.
