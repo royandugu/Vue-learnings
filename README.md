@@ -63,4 +63,7 @@ This is where we hydrate when the slider is only visible. Before the slider is e
 This is where we hydrate the necessary js for the form only when visible. Like the validation code and all that.
 
 ## Variable sharing in vue 
-The provide function must be called in a parent component and inject must be used in a descendant component. Provide ko through we make that variable avaliable and then inject ko through access garne. Bascially parent component mah provide hunxa tesbata child mah pathaune.
+The provide function must be called in a parent component and inject must be used in a descendant component. Provide ko through we make that variable avaliable and then inject ko through access garne. Bascially parent component mah provide hunxa tesbata child mah pathaune. So for any global variables we can just create an upper parent which will provide and where required the child will inject. 
+
+## Visualization
+Island ko basis mah visualize garne. Header? It's an interactive island does it need vue no. Like that. 
