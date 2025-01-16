@@ -67,3 +67,10 @@ The provide function must be called in a parent component and inject must be use
 
 ## Visualization
 Island ko basis mah visualize garne. Header? It's an interactive island does it need vue no. Like that. 
+
+## Component's reactive state
+Ho hamro template mah kunai variable store garnu paryo vane tyo component ko reactive state mah store hunu parxa. And that happens when you use the ref. Just as we did in api-call.
+
+## Pinia starts here ---
+## Store
+React mah redux vue mah Pinia. So redux store jastai Pinia store hune. Simply hamro euta entitiy vanam jasle hamro global states ra buisness logic haru hold garxan ra eta bata jasle pani access garna sakxa. Store mah 3 ota kura hunxa, state, getters and action. Getters vaneko computed properties of the data.
