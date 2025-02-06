@@ -1,11 +1,22 @@
-// import { defineStore } from "pinia";
+// stores/counter.js
 
-// export const testStore=defineStore('text-store',{   
-//     state:()=>({name:"Royan",age:19}),
-//     getters:{
-//         doubleCount: (state) => state. * 2
-//     },
-//     actions:{
+import { defineStore } from "pinia";
 
-//     }
-// });
+export const useCounterStore = defineStore("counter",{
+    state:()=>({count:0}),
+    actions:{
+        increment(){
+            this.count++;
+        },
+        decrement(){
+            this.count--;
+        },
+        multiplyWith(x:any){
+            this.count*x;
+        }
+    },
+    //getters - read and transform value within pinia context
+    getters:{
+        double: (state) => state.count*2
+    }
+})

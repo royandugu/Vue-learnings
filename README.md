@@ -74,3 +74,20 @@ Ho hamro template mah kunai variable store garnu paryo vane tyo component ko rea
 ## Pinia starts here ---
 ## Store
 React mah redux vue mah Pinia. So redux store jastai Pinia store hune. Simply hamro euta entitiy vanam jasle hamro global states ra buisness logic haru hold garxan ra eta bata jasle pani access garna sakxa. Store mah 3 ota kura hunxa, state, getters and action. Getters vaneko computed properties of the data.
+Creating a Pinia store : 
+import defineStore and then a variable to be exported from store.ts;
+export const store = defineStore()
+defineStore function takes two arguments, first being the name of the store (id of the store) and second being the object that contains state and actions as the keys. 
+state:()=>({count}) this is the initial value of the variable 
+now actions:{
+    functionName(){
+        count++ or anything
+    }
+}
+## Error 
+ "getActivePinia()" was called but there was no active Pinia. Are you trying to use a store before calling "app.use(pinia)"?
+See https://pinia.vuejs.org/core-concepts/outside-component-usage.html for help.
+This will fail in production. 
+Basically Pinia ko store rely garxa pinia ko instance mah depend hunxa jasko help bata tyo hamro store ko instance haru sabai tira share garxan. Dherai jaso it does work, jasma useStore() function call garna milxa. Tara iniharu component bahira vayo vane testo hudaina. useStore() le pinia instance inject garnu paryo hamro app mah, tara kaile kaii tyo automatically inject hudaina, so yesto bela manually hamile teslai useStore function mah provide garnu parxa. 
+
+
