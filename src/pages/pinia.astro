@@ -1,4 +1,11 @@
 ---
-import UseStore from "../components/vue/useStore.vue";
+import App from "../components/vue/App.vue";
+import { createApp } from "vue";
+import {createPinia} from "pinia";
+
+const app = createApp(App);
+const pinia = createPinia();
+app.use(pinia);
+
 ---
-<UseStore/>
+<App/>

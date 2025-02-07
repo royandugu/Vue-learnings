@@ -1,7 +1,18 @@
 <script setup>
     import { useCounterStore } from '../pinia/store';
-    const store = useCounterStore();
+
+    const counterStore = useCounterStore();
+
+    const increase=()=>{
+        console.log("increase has been called")
+    }
+    const decrease=()=>{
+        console.log("decrease has been called");
+    }
 </script>
 <template>
-    <h5> This is where we call the store </h5>
+    <section>
+        <button @click="increase"> Increase </button>
+        <button @click="decrease"> Decrease </button>
+    </section>
 </template>

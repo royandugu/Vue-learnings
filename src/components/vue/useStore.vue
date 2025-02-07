@@ -1,20 +1,23 @@
 <script setup>
-import { createPinia } from 'pinia';
-import { useCounterStore } from '../pinia/store';
+    import { useCounterStore } from '../pinia/store';
+    
+    const store=useCounterStore();
 
-const pinia = createPinia();
-const myStore=useCounterStore();
+    const increase=()=>{
+        
 
-
-console.log(pinia);
-console.log(myStore);
-
+        console.log("increase has been called");
+    }
 </script>
 
 <template>
 <section>
     <button> Number </button>
-    <button> Add </button>
+    <button @click="increase"> Add </button>
     <button> Subtract </button>
+    <div>
+    </div>
 </section>
 </template>
+<style>
+</style>
